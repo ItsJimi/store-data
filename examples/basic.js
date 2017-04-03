@@ -1,3 +1,6 @@
 var store = require('../lib');
 
-console.log(store.get());
+store.init({
+  directory: 'documents',
+  documents: ['users', 'tests', 'cars']
+});
