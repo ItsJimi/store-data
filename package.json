@@ -1,0 +1,26 @@
+{
+  "name": "storejs",
+  "version": "1.0.0",
+  "description": "Little database for node.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsJimi/StoreJS.git"
+  },
+  "keywords": [
+    "database",
+    "node",
+    "store",
+    "storage",
+    "db"
+  ],
+  "author": "Jimi M",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ItsJimi/StoreJS/issues"
+  },
+  "homepage": "https://github.com/ItsJimi/StoreJS#readme"
+}
