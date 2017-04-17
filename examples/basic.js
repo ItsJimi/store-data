@@ -12,4 +12,4 @@ store.set('users', 'abc123', {
 })
 console.log(store.get('users', 'abc123'))
 
-// console.log(store.keys('users'))
+store.test()
