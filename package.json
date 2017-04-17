@@ -1,5 +1,5 @@
 {
-  "name": "storejs",
+  "name": "store-data",
   "version": "1.0.0",
   "description": "Little database for node.js",
   "main": "lib/index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ItsJimi/StoreJS.git"
+    "url": "git+https://github.com/ItsJimi/store-data.git"
   },
   "keywords": [
     "database",
@@ -20,7 +20,7 @@
   "author": "Jimi M",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ItsJimi/StoreJS/issues"
+    "url": "https://github.com/ItsJimi/store-data/issues"
   },
-  "homepage": "https://github.com/ItsJimi/StoreJS#readme"
+  "homepage": "https://github.com/ItsJimi/store-data#readme"
 }
