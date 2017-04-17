@@ -2,14 +2,13 @@ var store = require('../lib')
 
 store.init({
   directory: 'documents',
-  documents: ['users', 'tests', 'cars', 'blabla']
+  documents: ['users', 'cars', 'blabla'],
+  save: false // false or number in millisecond
 })
 
-console.log(store.get('users', 'abc123'))
 store.set('users', 'abc123', {
-  name: 'Jimi',
-  age: 19
+  firstname: 'Jimi',
+  lastname: 'blabla',
+  test: true
 })
 console.log(store.get('users', 'abc123'))
-
-store.test()
