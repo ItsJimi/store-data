@@ -1,6 +1,9 @@
 # store-data
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![npm](https://img.shields.io/npm/l/store-data.svg)](https://github.com/ItsJimi/store-data/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/ItsJimi/store-data.svg?branch=master)](https://travis-ci.org/ItsJimi/store-data)
+[![Dependency](https://david-dm.org/ItsJimi/store-data.svg)](https://david-dm.org/ItsJimi/store-data)
+[![DevDependency](https://david-dm.org/ItsJimi/store-data/dev-status.svg)](https://david-dm.org/ItsJimi/store-data?type=dev)
 
 Simple database written in javascript
 ## Install
