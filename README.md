@@ -20,7 +20,7 @@ var store = require('store-data')
 store.init({
   directory: 'documents',
   documents: ['users', 'cars', 'blabla'],
-  save: false // false or number in millisecond
+  save: false // false, true or number in millisecond
 })
 
 store.set('users', 'abc123', {
