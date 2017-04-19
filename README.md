@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/ItsJimi/store-data.svg?branch=master)](https://travis-ci.org/ItsJimi/store-data)
 [![Dependency](https://david-dm.org/ItsJimi/store-data.svg)](https://david-dm.org/ItsJimi/store-data)
 [![DevDependency](https://david-dm.org/ItsJimi/store-data/dev-status.svg)](https://david-dm.org/ItsJimi/store-data?type=dev)
+[![Coverage Status](https://coveralls.io/repos/github/ItsJimi/store-data/badge.svg?branch=master)](https://coveralls.io/github/ItsJimi/store-data?branch=master)
 
 [![NPM](https://nodei.co/npm/store-data.png?compact=true)](https://nodei.co/npm/store-data/)
 
