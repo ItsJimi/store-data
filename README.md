@@ -32,5 +32,6 @@ console.log(store.get('users', 'abc123'))
 ```
 ## Contribute
 Feel free to fork and make pull requests
+
 ## License
 [MIT](https://github.com/ItsJimi/store-data/blob/master/LICENSE)
