@@ -5,6 +5,8 @@
 [![Dependency](https://david-dm.org/ItsJimi/store-data.svg)](https://david-dm.org/ItsJimi/store-data)
 [![DevDependency](https://david-dm.org/ItsJimi/store-data/dev-status.svg)](https://david-dm.org/ItsJimi/store-data?type=dev)
 
+[![NPM](https://nodei.co/npm/store-data.png?compact=true)](https://nodei.co/npm/store-data/)
+
 Simple database written in javascript
 ## Install
 ```
