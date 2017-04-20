@@ -9,10 +9,12 @@
 [![NPM](https://nodei.co/npm/store-data.png?compact=true)](https://nodei.co/npm/store-data/)
 
 Simple database written in javascript
+
 ## Install
 ```
 npm i store-data
 ```
+
 ## Example
 ```javascript
 var store = require('store-data')
@@ -30,6 +32,7 @@ store.set('users', 'abc123', {
 })
 console.log(store.get('users', 'abc123'))
 ```
+
 ## Contribute
 Feel free to fork and make pull requests
 
