@@ -1,6 +1,6 @@
 {
   "name": "store-data",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Little database for node.js",
   "main": "lib/index.js",
   "scripts": {
