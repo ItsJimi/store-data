@@ -33,6 +33,42 @@ store.set('users', 'abc123', {
 console.log(store.get('users', 'abc123'))
 ```
 
+## API
+
+### init(options)
+This function initialize database, it is required and be not called several times
+
+#### option (Object)
+- directory (String) Path
+- documents (Array of string) Name of documents
+- save (Boolean or Number) If ```number``` server save data every ```number``` seconds
+- error (Boolean) If ```true``` errors crash the server
+- verbose (Boolean) If ```true``` errors are print
+
+### set(document, key, value)
+This function set value in a document
+
+- document (String)
+- key (String)
+- value (any)
+
+### get(document, key)
+This function get value of key
+
+- document (String)
+- key (String)
+
+### del(document, key)
+This function delete value and key
+
+- document (String)
+- key (String)
+
+### save(document)
+This function save in-memory storage in file system
+
+- document (String) Optional, save all documents or ```document```
+
 ## Contribute
 Feel free to fork and make pull requests
 
