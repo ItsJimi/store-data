@@ -22,7 +22,8 @@ var store = require('store-data')
 store.init({
   directory: 'documents',
   documents: ['users', 'cars', 'blabla'],
-  save: false // false, true or number in millisecond
+  save: false, // false, true or number in millisecond
+  recovering: false // true to recreate empty db if error
 })
 
 store.set('users', 'abc123', {
