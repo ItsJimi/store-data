@@ -36,7 +36,7 @@ console.log(store.get('users', 'abc123'))
 ## API
 
 ### init(options)
-This function initialize database, it is required and be not called several times
+This function initialize database, it's required and should only be called once
 
 #### option (Object)
 - directory (String) Path
@@ -44,6 +44,7 @@ This function initialize database, it is required and be not called several time
 - save (Boolean or Number) If ```number``` server save data every ```number``` seconds
 - error (Boolean) If ```true``` errors crash the server
 - verbose (Boolean) If ```true``` errors are print
+- recovering (Boolean) If `true` recreate automatically a empty db if file can't be read
 
 ### set(document, key, value)
 This function set value in a document
