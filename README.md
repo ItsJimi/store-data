@@ -17,23 +17,22 @@ npm i store-data
 
 ## Example
 ```javascript
-var store = require('store-data')
+const Store = require('store-data')
 
-store.init({
-  directory: 'documents',
-  documents: ['users', 'cars', 'blabla'],
-  save: false // false, true or number in millisecond
+const users = new Store({
+  save: false
 })
 
-store.set('users', 'abc123', {
-  firstname: 'Jimi',
-  lastname: 'blabla',
-  test: true
+users.setSync('user123', {
+  name: 'Jimi',
+  dev: true
 })
-console.log(store.get('users', 'abc123'))
+
+console.log(users.getSync('user123'))
+// { name: 'Jimi', dev: true }
 ```
 
-## API
+## API (DEPRECATED)
 
 ### init(options)
 This function initialize database, it's required and should only be called once

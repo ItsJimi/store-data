@@ -1,16 +1,33 @@
 const assert = require('assert')
 const Store = require('../lib')
 
-/* global describe it */
+/* eslint-env mocha */
 
 describe('store-data', () => {
-  it('init', () => {
-    const users = new Store({
-      name: 'users',
-      directory: 'db',
-      save: false
+  describe('In memory (save = false)', () => {
+    let users
+
+    it('init', () => {
+      users = new Store({
+        save: false
+      })
     })
 
-    console.log(users)
+    it('getSync', () => {
+      assert.deepEqual(users.getSync('name'), undefined)
+      users.setSync('name', 'Jimi')
+      assert.deepEqual(users.getSync('name'), 'Jimi')
+    })
+
+    it('get', (done) => {
+      users.get('dev').then(value => {
+        assert.deepEqual(value, undefined)
+        users.setSync('dev', true)
+        users.get('dev').then(value => {
+          assert.deepEqual(value, true)
+          done()
+        })
+      })
+    })
   })
 })
