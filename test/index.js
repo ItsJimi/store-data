@@ -1,38 +1,107 @@
-var assert = require('assert')
-var store = require('../lib')
+'use strict'
+const assert = require('assert')
+const Store = require('../lib')
 
-/* global describe it */
+/* eslint-env mocha */
 
 describe('store-data', () => {
-  it('init', () => {
-    var init = store.init({
-      directory: 'documents',
-      documents: ['users'],
-      save: true
+  describe('In memory (save = false)', () => {
+    let users
+
+    it('init', () => {
+      users = new Store({
+        save: false
+      })
     })
-    assert.equal(init, true)
+
+    it('setSync', () => {
+      users.setSync('name', 'Jimi')
+    })
+
+    it('getSync', () => {
+      assert.deepEqual(users.getSync('name'), 'Jimi')
+    })
+
+    it('deleteSync', () => {
+      users.deleteSync('name')
+      assert.deepEqual(users.getSync('name'), undefined)
+    })
+
+    it('set', (done) => {
+      users.set('name', 'Jimi').then(() => {
+        done()
+      }).catch(err => {
+        done(err)
+      })
+    })
+
+    it('get', (done) => {
+      users.get('name').then(value => {
+        assert.deepEqual(value, 'Jimi')
+        done()
+      }).catch(err => {
+        done(err)
+      })
+    })
+
+    it('delete', (done) => {
+      users.delete('name').then(() => {
+        assert.deepEqual(users.getSync('name'), undefined)
+        done()
+      }).catch(err => {
+        done(err)
+      })
+    })
   })
-  it('get', () => {
-    store.set('users', '1', {
-      firstname: 'Jimi',
-      lastname: 'blabla',
-      test: true
+
+  describe('Persistent (save = true)', () => {
+    let users
+
+    it('init', () => {
+      users = new Store({
+        save: true,
+        directory: 'storage',
+        name: 'users'
+      })
     })
-    store.set('users', '2', {
-      firstname: 'John',
-      lastname: 'Doe'
+
+    it('setSync', () => {
+      users.setSync('name', 'Jimi')
     })
-    var user = store.get('users', '1')
-    assert.equal(user.firstname, 'Jimi')
-    assert.equal(user.lastname, 'blabla')
-    assert.equal(user.test, true)
-  })
-  it('delete', () => {
-    store.del('users', '1')
-    var user1 = store.get('abc123')
-    assert.equal(user1, false)
-    var user2 = store.get('users', '2')
-    assert.equal(user2.firstname, 'John')
-    assert.equal(user2.lastname, 'Doe')
+
+    it('getSync', () => {
+      assert.deepEqual(users.getSync('name'), 'Jimi')
+    })
+
+    it('deleteSync', () => {
+      users.deleteSync('name')
+      assert.deepEqual(users.getSync('name'), undefined)
+    })
+
+    it('set', (done) => {
+      users.set('name', 'Jimi').then(() => {
+        done()
+      }).catch(err => {
+        done(err)
+      })
+    })
+
+    it('get', (done) => {
+      users.get('name').then(value => {
+        assert.deepEqual(value, 'Jimi')
+        done()
+      }).catch(err => {
+        done(err)
+      })
+    })
+
+    it('delete', (done) => {
+      users.delete('name').then(() => {
+        assert.deepEqual(users.getSync('name'), undefined)
+        done()
+      }).catch(err => {
+        done(err)
+      })
+    })
   })
 })
