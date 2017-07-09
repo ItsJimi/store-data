@@ -31,43 +31,51 @@ users.setSync('user123', {
 console.log(users.getSync('user123'))
 // { name: 'Jimi', dev: true }
 ```
+or
+```javascript
+const Store = require('store-data')
 
-## API (DEPRECATED)
+const users = new Store({
+  save: false
+})
 
-### init(options)
+users.set('user123', {
+  name: 'Jimi',
+  dev: true
+}).then(() => {
+  users.get('user123').then(value => {
+    console.log(value)
+    // { name: 'Jimi', dev: true }
+  })
+})
+```
+
+## API
+All asynchronous function are promise based
+
+### new Store(options)
 This function initialize database, it's required and should only be called once
 
 #### option (Object)
-- directory (String) Path
-- documents (Array of string) Name of documents
 - save (Boolean or Number) If ```number``` server save data every ```number``` seconds
-- error (Boolean) If ```true``` errors crash the server
-- verbose (Boolean) If ```true``` errors are print
-- recovering (Boolean) If `true` recreate automatically a empty db if file can't be read
+- directory (String) Path
+- name (String) Name of file when ```save = true```
 
-### set(document, key, value)
+### .set(key, value) or .setSync(key, value)
 This function set value in a document
 
-- document (String)
 - key (String)
 - value (any)
 
-### get(document, key)
+### .get(key) or .getSync(key)
 This function get value of key
 
-- document (String)
 - key (String)
 
-### del(document, key)
+### .delete(key) or .deleteSync(key)
 This function delete value and key
 
-- document (String)
 - key (String)
-
-### save(document)
-This function save in-memory storage in file system
-
-- document (String) Optional, save all documents or ```document```
 
 ## Contribute
 Feel free to fork and make pull requests
