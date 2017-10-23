@@ -1,14 +1,13 @@
-var store = require('../lib')
+const Store = require('../lib')
 
-store.init({
-  directory: 'documents',
-  documents: ['users', 'cars', 'blabla'],
-  save: false // false or number in millisecond
+const users = new Store({
+  save: false
 })
 
-store.set('users', 'abc123', {
-  firstname: 'Jimi',
-  lastname: 'blabla',
-  test: true
+users.setSync('user123', {
+  name: 'Jimi',
+  dev: true
 })
-console.log(store.get('users', 'abc123'))
+
+console.log(users.getSync('user123'))
+
