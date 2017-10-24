@@ -44,9 +44,30 @@ describe('store-data', () => {
       })
     })
 
+    it('update', (done) => {
+      users.setSync('update', {name: 'Jimi'})
+      users.update('update', {age: 20}).then(() => {
+        done()
+      }).catch(err => {
+        done(err)
+      })
+    })
+
+    it('update get', (done) => {
+      users.get('update').then(value => {
+        assert.deepEqual(value.name, 'Jimi')
+        assert.deepEqual(value.age, 20)
+        done()
+      }).catch(err => {
+        done(err)
+      })
+    })
+
     it('delete', (done) => {
       users.delete('name').then(() => {
         assert.deepEqual(users.getSync('name'), undefined)
+        users.deleteSync('update')
+        assert.deepEqual(users.getSync('update'), undefined)
         done()
       }).catch(err => {
         done(err)
@@ -95,9 +116,30 @@ describe('store-data', () => {
       })
     })
 
+    it('update', (done) => {
+      users.setSync('update', {name: 'Jimi'})
+      users.update('update', {age: 20}).then(() => {
+        done()
+      }).catch(err => {
+        done(err)
+      })
+    })
+
+    it('update get', (done) => {
+      users.get('update').then(value => {
+        assert.deepEqual(value.name, 'Jimi')
+        assert.deepEqual(value.age, 20)
+        done()
+      }).catch(err => {
+        done(err)
+      })
+    })
+
     it('delete', (done) => {
       users.delete('name').then(() => {
         assert.deepEqual(users.getSync('name'), undefined)
+        users.deleteSync('update')
+        assert.deepEqual(users.getSync('update'), undefined)
         done()
       }).catch(err => {
         done(err)
