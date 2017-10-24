@@ -8,7 +8,7 @@
 
 [![NPM](https://nodei.co/npm/store-data.png?compact=true)](https://nodei.co/npm/store-data/)
 
-Simple database written in javascript
+Finally, the simplest way to store data
 
 ## Install
 ```

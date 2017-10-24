@@ -1,7 +1,7 @@
 {
   "name": "store-data",
   "version": "1.1.2",
-  "description": "Little database for node.js",
+  "description": "Finally, the simplest way to store data",
   "main": "lib/index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test"
