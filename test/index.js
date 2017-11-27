@@ -53,6 +53,15 @@ describe('store-data', () => {
       })
     })
 
+    it('list', (done) => {
+      users.list().then(value => {
+        assert.deepEqual(value, ['name', 'update']);
+        done()
+      }).catch(err => {
+        done(err)
+      })
+    })
+
     it('update get', (done) => {
       users.get('update').then(value => {
         assert.deepEqual(value.name, 'Jimi')
@@ -119,6 +128,15 @@ describe('store-data', () => {
     it('update', (done) => {
       users.setSync('update', {name: 'Jimi'})
       users.update('update', {age: 20}).then(() => {
+        done()
+      }).catch(err => {
+        done(err)
+      })
+    })
+
+    it('list', (done) => {
+      users.list().then(value => {
+        assert.deepEqual(value, ['name', 'update']);
         done()
       }).catch(err => {
         done(err)

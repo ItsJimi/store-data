@@ -50,32 +50,8 @@ users.set('user123', {
 })
 ```
 
-## API
-All asynchronous function are promise based
-
-### new Store(options)
-This function initialize database, it's required and should only be called once
-
-#### option (Object)
-- save (Boolean or Number) If ```number``` server save data every ```number``` seconds
-- directory (String) Path
-- name (String) Name of file when ```save = true```
-
-### .set(key, value) or .setSync(key, value)
-This function set value in a document
-
-- key (String)
-- value (any)
-
-### .get(key) or .getSync(key)
-This function get value of key
-
-- key (String)
-
-### .delete(key) or .deleteSync(key)
-This function delete value and key
-
-- key (String)
+## Docs
+All functions are documented with jsdoc on [store-data website](https://itsjimi.github.io/store-data).
 
 ## Contribute
 Feel free to fork and make pull requests

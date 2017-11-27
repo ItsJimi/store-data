@@ -10,4 +10,3 @@ users.setSync('user123', {
 })
 
 console.log(users.getSync('user123'))
-
