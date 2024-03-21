@@ -1,4 +1,5 @@
 # store-data
+[![Test](https://github.com/ItsJimi/store-data/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/ItsJimi/store-data/actions/workflows/test.yml)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![npm](https://img.shields.io/npm/l/store-data.svg)](https://github.com/ItsJimi/store-data/blob/master/LICENSE)
 
