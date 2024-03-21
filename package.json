@@ -1,6 +1,6 @@
 {
   "name": "store-data",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Finally, the simplest way to store data",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
